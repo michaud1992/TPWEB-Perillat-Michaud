@@ -77,8 +77,10 @@ class DefaultController extends Controller
 		$form->handleRequest($request);
 
 		if ($form->isValid()) {
+			$em = $this->getDoctrine()->getManager();
 			$request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
-
+			$em->flush();
+			
       		return $this->redirect($this->generateUrl('pm_tp_view', array('id' => $article->getId())));
 		}
 
