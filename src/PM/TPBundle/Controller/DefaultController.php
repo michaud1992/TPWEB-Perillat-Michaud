@@ -13,7 +13,9 @@ class DefaultController extends Controller
 {
     public function indexAction($page)
     {
-        return $this->render('PMTPBundle:Default:index.html.twig');
+		$em = $this->getDoctrine()->getManager();
+		$listArticles =$em->getRepository('PMTPBundle:Article')->findAll();
+        return $this->render('PMTPBundle:Default:index.html.twig', array('listArticles' => $listArticles));
     }
 	
 	public function viewAction($id)
@@ -85,7 +87,7 @@ class DefaultController extends Controller
 		}
 
 		return $this->render('PMTPBundle:Default:edit.html.twig', array(
-		'form' => $form->createView(),
+		'form' => $form->createView(), 'id' => $article->getId()
 		));
     }
 	

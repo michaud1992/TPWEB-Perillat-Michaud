@@ -18,11 +18,11 @@
       <i class="glyphicon glyphicon-chevron-left"></i>
       Retour à l'accueil
     </a>
-    <a href="{{ path('pm_tp_edit', {'id': 1}) }}" class="btn btn-default">
+    <a href="{{ path('pm_tp_edit', {'id': article.id}) }}" class="btn btn-default">
       <i class="glyphicon glyphicon-edit"></i>
       Modifier l'article
     </a>
-    <a href="{{ path('pm_tp_delete', {'id': 1}) }}" class="btn btn-danger">
+    <a href="{{ path('pm_tp_delete', {'id': article.id}) }}" class="btn btn-danger">
       <i class="glyphicon glyphicon-trash"></i>
       Supprimer l'article
     </a>
