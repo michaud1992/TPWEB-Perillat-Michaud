@@ -1,0 +1,8 @@
+pmtp:
+    resource: "@PMTPBundle/Resources/config/routing.yml"
+    prefix:   /tpweb
+
+apb_platform:
+    resource: "@APBPlatformBundle/Resources/config/routing.yml"
+    prefix: /platform
+

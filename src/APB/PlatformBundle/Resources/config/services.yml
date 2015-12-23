@@ -1,0 +1,4 @@
+services:
+    apb_platform.antispam:
+        class: APB\PlatformBundle\Antispam\APBAntispam
+        arguments: [@mailer, %locale%, 50]

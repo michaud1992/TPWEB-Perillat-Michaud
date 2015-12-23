@@ -1,0 +1,29 @@
+apb_platform_home:
+    path: /{page} 
+    defaults: 
+        _controller: APBPlatformBundle:Advert:index
+        page: 1
+    requirements:
+        page: \d*
+
+apb_platform_view:
+    path: /advert/{id}
+    defaults: { _controller: APBPlatformBundle:Advert:view }
+    requirements:
+        id: \d+
+
+apb_platform_add:
+    path: /add
+    defaults: { _controller: APBPlatformBundle:Advert:add }	
+
+apb_platform_edit:
+    path: /edit/{id}
+    defaults: { _controller: APBPlatformBundle:Advert:edit }	
+    requirements:
+        id: \d+
+
+apb_platform_delete:
+    path: /delete/{id}
+    defaults: { _controller: APBPlatformBundle:Advert:delete }	
+    requirements:
+        id: \d+
